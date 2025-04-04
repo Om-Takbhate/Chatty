@@ -14,7 +14,7 @@ const app = express()
 
 
 app.use(cors({
-    origin: 'https://chatty-ui.onrender.com/',
+    origin: 'https://chatty-ui.onrender.com',
     credentials: true
 }))
 
