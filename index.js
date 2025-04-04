@@ -8,9 +8,17 @@ const chatRoutes = require('./routes/chatRoutes')
 const messageRoutes = require('./routes/messageRoutes')
 const {createServer} = require('http')
 const {Server} = require('socket.io')
-
+const cors = require('cors')
 
 const app = express()
+
+
+app.use(cors({
+    origin: 'https://chatty-ui.onrender.com/',
+    credentials: true
+}))
+
+
 const port = process.env.PORT || 3000
 
 app.use(express.json())
