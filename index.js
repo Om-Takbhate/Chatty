@@ -18,6 +18,12 @@ app.use(cors({
     credentials: true
 }))
 
+app.get("/wealth", (req,res) => {
+    res.send({
+        message: "Server is live"
+    })
+})
+
 
 const port = process.env.PORT || 3000
 
